@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<hr>
+<table width="500" border="5">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Model</th>
+        <th>Serial</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="msg:${cars}">
+        <td th:text="${msg.id}"/>
+        <td th:text="${msg.model}"/>
+        <td th:text="${msg.series}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
