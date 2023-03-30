@@ -18,11 +18,7 @@ public class CarController {
 
     @GetMapping(value = "/cars")
     public String printCarTable(@RequestParam(value = "count", defaultValue = "5") int count, ModelMap model) {
-        if (count > 1) {
-            model.addAttribute("cars", carService.getListCars(count));
-        }else {
-            model.addAttribute("cars", carService.getListCars(0));
-        }
+        model.addAttribute("cars", carService.getListCars(count));
         return "cars";
     }
 
